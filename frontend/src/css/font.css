@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Sans:wght@300;400;500&family=Jost:wght@200;300;400;500;600&family=Montserrat:wght@300;400;500;600;700&family=Libre+Baskerville:wght@400;700&family=Didact+Gothic&family=Tenor+Sans&family=Bebas+Neue&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: 'DM Sans', 'Jost', 'Helvetica Neue', sans-serif;
+  font-size: var(--text-base, 1rem);
+  font-weight: 400;
+  line-height: var(--leading-normal, 1.6);
+  color: var(--color-ink, #0d0d0d);
+  background-color: var(--color-bg, #f7f6f3);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  font-weight: 400;
+  line-height: var(--leading-tight, 1.1);
+  color: var(--color-text-primary, #111111);
+  letter-spacing: var(--tracking-tight, -0.5px);
+}
+
+h1 { font-size: var(--text-h1, clamp(2.5rem, 7vw, 5rem)); }
+h2 { font-size: var(--text-h2, 2.4rem); }
+h3 { font-size: var(--text-h3, 1.8rem); }
+h4 { font-size: var(--text-h4, 1.3rem); }
+h5 { font-size: var(--text-h5, 1.15rem); }
+h6 { font-size: var(--text-large, 1.1rem); }
+
+p {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: var(--text-body, 0.95rem);
+  color: var(--color-text-secondary, #333333);
+  line-height: var(--leading-relaxed, 1.8);
+  margin-bottom: 1rem;
+}
+
+small {
+  font-family: 'DM Sans', sans-serif;
+  font-size: var(--text-xs, 0.82rem);
+  color: var(--color-text-muted, #555555);
+}
+
+span {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+a {
+  color: var(--color-primary, #000000);
+  text-decoration: none;
+  transition: color var(--transition-base, 0.25s ease);
+}
+
+a:hover {
+  color: var(--color-ink-muted, #5a5a5a);
+}
+
+strong, b {
+  font-weight: 600;
+  color: var(--color-text-primary, #111111);
+}
+
+em, i {
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 0.9375rem;
+  }
+
+  h1 { font-size: clamp(1.8rem, 8vw, 3rem); }
+  h2 { font-size: clamp(1.5rem, 5vw, 2rem); }
+  h3 { font-size: clamp(1.2rem, 4vw, 1.6rem); }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 0.9rem;
+  }
+}

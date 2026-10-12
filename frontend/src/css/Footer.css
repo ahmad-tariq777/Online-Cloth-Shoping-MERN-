@@ -1,0 +1,188 @@
+.luxury-footer {
+  background: var(--footer-bg, #000000);
+  color: var(--footer-color, #ffffff);
+  padding: clamp(80px, 10vw, 140px) clamp(24px, 6vw, 100px) clamp(40px, 5vw, 60px);
+  text-align: center;
+  font-family: 'DM Sans', 'Jost', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.luxury-footer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 50% at 50% 0%, rgba(201,168,76,0.05) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.footer-brand {
+  margin-bottom: clamp(40px, 6vw, 60px);
+  position: relative;
+}
+
+.footer-brand h1 {
+  font-family: 'Bebas Neue', 'Playfair Display', serif;
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 400;
+  letter-spacing: var(--tracking-logo, 12px);
+  color: var(--footer-color, #ffffff);
+  line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.footer-brand-rule {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.footer-brand-rule::before,
+.footer-brand-rule::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: rgba(201,168,76,0.4);
+}
+
+.footer-brand-rule-diamond {
+  width: 4px;
+  height: 4px;
+  background: var(--color-gold, #c9a84c);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: clamp(24px, 4vw, 50px);
+  margin-bottom: clamp(32px, 5vw, 50px);
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--footer-color, #ffffff);
+  font-size: var(--footer-link-size, 0.85rem);
+  font-family: 'Didact Gothic', 'Tenor Sans', sans-serif;
+  letter-spacing: var(--tracking-widest, 2px);
+  text-transform: uppercase;
+  transition: color var(--transition-medium, 0.3s ease), opacity var(--transition-medium, 0.3s ease);
+  position: relative;
+  padding-bottom: 3px;
+}
+
+.footer-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--color-gold, #c9a84c);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform var(--transition-medium, 0.3s ease);
+}
+
+.footer-links a:hover {
+  color: var(--color-gold-light, #d4af70);
+  opacity: 1;
+}
+
+.footer-links a:hover::after {
+  transform: scaleX(1);
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(16px, 3vw, 30px);
+  margin-bottom: clamp(40px, 6vw, 60px);
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255,255,255,0.15);
+  color: var(--footer-color, #ffffff);
+  font-size: 1rem;
+  transition: border-color var(--transition-medium, 0.3s ease),
+              color var(--transition-medium, 0.3s ease),
+              transform var(--transition-medium, 0.3s ease),
+              background var(--transition-medium, 0.3s ease);
+}
+
+.footer-social a:hover {
+  transform: translateY(-4px);
+  color: var(--color-gold, #c9a84c);
+  border-color: rgba(201,168,76,0.5);
+  background: rgba(201,168,76,0.06);
+}
+
+.footer-bottom {
+  border-top: var(--footer-border-top, 1px solid #333333);
+  padding-top: clamp(20px, 3vw, 30px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-bottom p,
+.footer-bottom span {
+  font-size: var(--text-xxs, 0.78rem);
+  letter-spacing: var(--tracking-wider, 1px);
+  color: var(--footer-bottom-color, #aaaaaa);
+  font-family: 'Didact Gothic', sans-serif;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .footer-links {
+    gap: 18px 28px;
+  }
+
+  .footer-links a {
+    font-size: 0.78rem;
+    letter-spacing: 1.5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .luxury-footer {
+    padding: 64px 20px 40px;
+  }
+
+  .footer-brand h1 {
+    letter-spacing: 6px;
+    font-size: clamp(2.4rem, 10vw, 3.2rem);
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .footer-social {
+    gap: 12px;
+  }
+
+  .footer-social a {
+    width: 36px;
+    height: 36px;
+  }
+}

@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Sans:wght@300;400;500&family=Jost:wght@200;300;400;500;600&family=Libre+Baskerville:wght@400;700&display=swap');
+
+.signup-container {
+  max-width: var(--form-card-max-width, 420px);
+  margin: var(--space-28, 80px) auto;
+  padding: var(--form-card-padding, 48px);
+  background: var(--color-secondary, #ffffff);
+  border: var(--form-card-border, 1px solid rgba(0,0,0,0.45));
+  box-shadow: var(--form-card-shadow, 0 4px 18px rgba(0,0,0,0.05));
+  border-radius: var(--radius-none, 0);
+  box-sizing: border-box;
+}
+
+.signup-container h2 {
+  font-family: var(--font-sans, 'DM Sans', sans-serif);
+  font-size: var(--text-h4, 1.3rem);
+  font-weight: var(--weight-regular, 400);
+  text-align: center;
+  margin-bottom: var(--space-14, 40px);
+  color: var(--color-text-primary, #111111);
+  letter-spacing: var(--tracking-wider, 1px);
+  text-transform: uppercase;
+}
+
+.signup-container input[type="text"],
+.signup-container input[type="email"],
+.signup-container input[type="password"] {
+  width: 100%;
+  padding: var(--form-input-padding, 10px 0);
+  margin-bottom: var(--space-9, 28px);
+  font-family: var(--font-sans, 'DM Sans', sans-serif);
+  font-size: var(--form-input-size, 15px);
+  border: none;
+  border-bottom: var(--form-input-border, 1px solid #bbbbbb);
+  background: var(--form-input-bg, transparent);
+  color: var(--color-text-primary, #111111);
+  transition: border-color var(--transition-medium, 0.3s ease);
+  box-sizing: border-box;
+  outline: none;
+}
+
+.signup-container input[type="text"]::placeholder,
+.signup-container input[type="email"]::placeholder,
+.signup-container input[type="password"]::placeholder {
+  color: var(--form-placeholder-color, #bbbbbb);
+  font-weight: var(--weight-thin, 300);
+  letter-spacing: var(--tracking-wide, 0.5px);
+}
+
+.signup-container input[type="text"]:focus,
+.signup-container input[type="email"]:focus,
+.signup-container input[type="password"]:focus {
+  border-bottom: var(--form-input-focus, 2px solid #000000);
+}
+
+.signup-container input:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.signup-container button[type="submit"] {
+  width: 100%;
+  padding: var(--btn-primary-padding, 12px 0);
+  font-family: var(--font-sans, 'DM Sans', sans-serif);
+  font-size: var(--btn-primary-size, 13px);
+  text-transform: uppercase;
+  letter-spacing: var(--btn-primary-tracking, 1px);
+  background: var(--btn-primary-bg, #000000);
+  color: var(--btn-primary-color, #ffffff);
+  border: var(--btn-primary-border, 1px solid #000000);
+  cursor: pointer;
+  transition: background var(--transition-medium, 0.3s ease), color var(--transition-medium, 0.3s ease);
+  border-radius: var(--radius-none, 0);
+  margin-top: var(--space-1, 4px);
+}
+
+.signup-container button[type="submit"]:hover:not(:disabled) {
+  background: var(--btn-primary-hover-bg, #ffffff);
+  color: var(--btn-primary-hover-color, #000000);
+}
+
+.signup-container button[type="submit"]:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.signup-container .divider {
+  margin: var(--space-7, 20px) 0;
+  text-align: center;
+  color: var(--color-stone, #c8c4bc);
+  font-family: var(--font-sans, 'DM Sans', sans-serif);
+  font-size: var(--text-xs, 0.82rem);
+  letter-spacing: var(--tracking-wider, 1px);
+  text-transform: uppercase;
+  position: relative;
+}
+
+.signup-container .divider::before,
+.signup-container .divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 42%;
+  height: 1px;
+  background: var(--color-border, #e2e0da);
+}
+
+.signup-container .divider::before { left: 0; }
+.signup-container .divider::after  { right: 0; }
+
+.signup-container .google-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--space-1, 4px);
+}
+
+.signup-container .message {
+  margin-top: var(--space-3, 12px);
+  font-family: var(--font-sans, 'DM Sans', sans-serif);
+  font-size: var(--text-xs, 0.82rem);
+  text-align: center;
+  font-weight: var(--weight-medium, 500);
+  letter-spacing: var(--tracking-wide, 0.5px);
+}
+
+.signup-container .message--success { color: var(--color-success, #16a34a); }
+.signup-container .message--error   { color: var(--color-error, #dc2626); }
+
+.signup-container p {
+  font-family: var(--font-sans, 'DM Sans', sans-serif);
+  font-size: var(--text-xs, 0.82rem);
+  text-align: center;
+  color: var(--color-text-muted, #555555);
+  margin-top: var(--space-6, 18px);
+  line-height: var(--leading-normal, 1.6);
+}
+
+.signup-container p strong {
+  color: var(--color-text-primary, #111111);
+  font-weight: var(--weight-semibold, 600);
+}
+
+.signup-container a {
+  color: var(--color-primary, #000000);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--transition-medium, 0.3s ease);
+}
+
+.signup-container a:hover {
+  color: var(--color-ink-muted, #5a5a5a);
+}
+
+.signup-container .pin-subtitle {
+  font-family: var(--font-body, 'Libre Baskerville', serif);
+  color: var(--color-text-muted, #555555);
+  margin-bottom: var(--space-8, 24px);
+  font-size: var(--text-body, 0.95rem);
+  text-align: center;
+  line-height: var(--leading-normal, 1.6);
+}
+
+.signup-container .pin-row {
+  display: flex;
+  gap: var(--space-2, 10px);
+  justify-content: center;
+  margin-bottom: var(--space-9, 28px);
+}
+
+.signup-container .pin-input {
+  width: 48px;
+  height: 56px;
+  font-family: var(--font-sans, 'DM Sans', sans-serif);
+  font-size: 1.4rem;
+  font-weight: var(--weight-medium, 500);
+  text-align: center;
+  border: var(--border-medium, 1.5px) solid var(--color-border, #e2e0da);
+  border-radius: var(--radius-none, 0);
+  background: var(--color-secondary, #ffffff);
+  color: var(--color-text-primary, #111111);
+  transition: border-color var(--transition-base, 0.25s ease), box-shadow var(--transition-base, 0.25s ease);
+  outline: none;
+  margin-bottom: 0 !important;
+  padding: 0 !important;
+}
+
+.signup-container .pin-input:focus {
+  border-color: var(--color-primary, #000000);
+  box-shadow: 0 0 0 1px var(--color-primary, #000000);
+}
+
+.signup-container .pin-input:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.signup-container .text-btn {
+  background: none;
+  border: none;
+  color: var(--color-primary, #000000);
+  cursor: pointer;
+  padding: 0;
+  font-family: var(--font-sans, 'DM Sans', sans-serif);
+  font-size: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--transition-fast, 0.2s ease);
+}
+
+.signup-container .text-btn:hover:not(:disabled) {
+  color: var(--color-ink-muted, #5a5a5a);
+}
+
+.signup-container .text-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+@media (max-width: 480px) {
+  .signup-container {
+    padding: 36px 24px;
+    margin: 60px 16px;
+  }
+
+  .signup-container h2 {
+    font-size: var(--text-h5, 1.15rem);
+  }
+
+  .signup-container .pin-input {
+    width: 40px;
+    height: 48px;
+    font-size: 1.2rem;
+  }
+}
